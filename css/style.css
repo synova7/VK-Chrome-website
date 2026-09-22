@@ -315,28 +315,29 @@ ul { list-style: none; }
 
 /* ── Stats bar ───────────────────────────────── */
 .stats-bar {
-  padding: 48px 0 80px;
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+  padding: 56px 0;
 }
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0;
-  background: var(--glass);
+  background: transparent;
   border: 1px solid var(--glass-border);
   border-radius: var(--radius);
   overflow: hidden;
-  backdrop-filter: var(--blur);
-  -webkit-backdrop-filter: var(--blur);
 }
 .stat-card {
   padding: 36px 28px;
   background: transparent;
   text-align: center;
-  border-right: 1px solid rgba(255,255,255,0.08);
+  border-right: 1px solid rgba(255,255,255,0.10);
   transition: background var(--transition);
 }
 .stat-card:last-child { border-right: none; }
-.stat-card:hover { background: rgba(255,255,255,0.05); }
+.stat-card:hover { background: rgba(255,255,255,0.06); }
 .stat-num {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 2.8rem;
@@ -780,6 +781,9 @@ footer {
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
   .contact-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  /* 2×2 grid: remove right border on cols 2&4, add bottom border to row 1 */
+  .stats-grid .stat-card:nth-child(2n) { border-right: none; }
+  .stats-grid .stat-card:nth-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,0.10); }
 }
 
 @media (max-width: 768px) {
@@ -789,16 +793,23 @@ footer {
   .grid-3 { grid-template-columns: 1fr; }
   .ops-gallery { grid-template-columns: 1fr 1fr; }
   .ops-gallery .img-panel.tall { grid-row: span 1; height: 240px; }
-  .hero-panel { width: 220px; min-height: 340px; padding: 16px 18px; }
-  .section { padding: 72px 0; }
+  .hero-panel { width: min(260px, 78vw); min-height: 340px; padding: 18px 20px; }
+  .section { padding: 64px 0; }
   .form-row { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
+  .stat-num { font-size: 2.2rem; }
 }
 
 @media (max-width: 480px) {
   .stats-grid { grid-template-columns: 1fr; }
+  /* switch to bottom borders for single-column */
+  .stats-grid .stat-card {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+  }
+  .stats-grid .stat-card:last-child { border-bottom: none; }
   .ops-gallery { grid-template-columns: 1fr; }
   .grade-cards { grid-template-columns: 1fr !important; }
 }
