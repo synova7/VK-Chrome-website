@@ -274,7 +274,8 @@ ul { list-style: none; }
 }
 .hero-title span { color: var(--red); }
 .hero-subtitle {
-  font-size: 0.72rem;
+  font-size: 0.85rem;
+  line-height: 1.65;
   color: var(--text-muted);
   margin-bottom: 14px;
   max-width: 100%;
@@ -319,7 +320,7 @@ ul { list-style: none; }
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
+  gap: 0;
   background: var(--glass);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius);
@@ -329,12 +330,13 @@ ul { list-style: none; }
 }
 .stat-card {
   padding: 36px 28px;
-  background: var(--glass);
-  backdrop-filter: var(--blur);
+  background: transparent;
   text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.08);
   transition: background var(--transition);
 }
-.stat-card:hover { background: var(--glass-hover); }
+.stat-card:last-child { border-right: none; }
+.stat-card:hover { background: rgba(255,255,255,0.05); }
 .stat-num {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 2.8rem;
