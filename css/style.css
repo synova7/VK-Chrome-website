@@ -675,7 +675,7 @@ ul { list-style: none; }
 
 /* Phone field with country code */
 .phone-field { display: flex; gap: 8px; }
-.phone-code-select { flex: 0 0 auto; width: 78px; font-size: 0.82rem; padding-left: 8px; padding-right: 4px; }
+.phone-field .phone-code-select { flex: 0 0 auto; width: 78px; font-size: 0.82rem; padding-left: 8px; padding-right: 4px; }
 .phone-field input[type="tel"] { flex: 1; min-width: 0; width: 0; }
 
 /* Response time note */
