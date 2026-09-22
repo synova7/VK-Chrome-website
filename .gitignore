@@ -1,3 +1,6 @@
 .DS_Store
 *.orig
 node_modules/
+PHOTO-*.jpg
+VIDEO-*.mp4
+VK CHROME Company Profile.pdf
