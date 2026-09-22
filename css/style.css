@@ -253,7 +253,7 @@ ul { list-style: none; }
 .hero-panel {
   display: inline-block;
   width: 300px;
-  min-height: 300px;
+  min-height: 400px;
   padding: 22px 24px;
   border-left: 3px solid var(--red);
 }
@@ -787,7 +787,7 @@ footer {
   .grid-3 { grid-template-columns: 1fr; }
   .ops-gallery { grid-template-columns: 1fr 1fr; }
   .ops-gallery .img-panel.tall { grid-row: span 1; height: 240px; }
-  .hero-panel { width: 220px; min-height: 220px; padding: 16px 18px; }
+  .hero-panel { width: 220px; min-height: 340px; padding: 16px 18px; }
   .section { padding: 72px 0; }
   .form-row { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
