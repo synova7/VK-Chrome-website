@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="4" fill="#0C0806"/>
+  <!-- V Left -->
+  <polygon points="1,2 5,2 11,30 7,30" fill="#C0241A"/>
+  <!-- V Right -->
+  <polygon points="15,2 19,2 13,30 9,30" fill="#C0241A"/>
+  <!-- K Vertical -->
+  <polygon points="21,2 25,2 25,30 21,30" fill="#C0241A"/>
+  <!-- K Upper arm -->
+  <polygon points="25,2 31,2 25,16" fill="#C0241A"/>
+  <!-- K Lower arm -->
+  <polygon points="25,16 31,30 25,30" fill="#C0241A"/>
+</svg>
