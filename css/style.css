@@ -9,11 +9,11 @@
   --red:          #C0241A;
   --red-light:    #E03020;
   --red-dark:     #8B1410;
-  --bg:           #0C0806;
-  --bg-mid:       #0B0B0D;
-  --glass:        rgba(255, 255, 255, 0.08);
-  --glass-hover:  rgba(255, 255, 255, 0.13);
-  --glass-border: rgba(255, 255, 255, 0.14);
+  --bg:           #060D1F;
+  --bg-mid:       #0D1B3E;
+  --glass:        rgba(255, 255, 255, 0.10);
+  --glass-hover:  rgba(255, 255, 255, 0.16);
+  --glass-border: rgba(255, 255, 255, 0.20);
   --glass-red:    rgba(192, 36, 26, 0.10);
   --glass-red-border: rgba(192, 36, 26, 0.30);
   --blur:         blur(22px);
@@ -31,7 +31,8 @@
 html { scroll-behavior: smooth; }
 body {
   font-family: 'Inter', sans-serif;
-  background: var(--bg);
+  background: linear-gradient(160deg, #040C1C 0%, #0A1640 45%, #071429 100%) fixed;
+  background-color: #060D1F;
   color: var(--text);
   line-height: 1.65;
   overflow-x: hidden;
@@ -315,7 +316,7 @@ ul { list-style: none; }
 
 /* ── Stats bar ───────────────────────────────── */
 .stats-bar {
-  background: rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.06);
   backdrop-filter: var(--blur);
   -webkit-backdrop-filter: var(--blur);
   padding: 56px 0;
