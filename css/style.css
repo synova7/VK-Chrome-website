@@ -619,7 +619,7 @@ ul { list-style: none; }
   align-items: center;
   justify-content: center;
 }
-.contact-item-icon svg { width: 20px; height: 20px; stroke: var(--red); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.contact-item-icon svg { width: 20px; height: 20px; stroke: #00C853; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .contact-item-label {
   font-size: 0.72rem;
   letter-spacing: 0.12em;
