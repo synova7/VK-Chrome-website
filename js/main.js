@@ -48,10 +48,13 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 /* ── Parallax hero ───────────────────────────── */
 const parallaxEls = document.querySelectorAll('.hero-video, .hero-img');
 if (parallaxEls.length) {
+  const heroSection = parallaxEls[0].closest('.hero, .page-hero');
+  const heroH = heroSection ? heroSection.offsetHeight : window.innerHeight;
   window.addEventListener('scroll', () => {
     const y = window.scrollY;
+    if (y > heroH) return;
     parallaxEls.forEach(el => {
-      el.style.transform = `translateY(${y * 0.38}px)`;
+      el.style.transform = `translateY(${y * 0.30}px)`;
     });
   }, { passive: true });
 }
