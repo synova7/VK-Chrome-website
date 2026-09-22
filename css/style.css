@@ -619,8 +619,8 @@ ul { list-style: none; }
   flex-shrink: 0;
   width: 44px; height: 44px;
   border-radius: 10px;
-  background: var(--glass-red);
-  border: 1px solid var(--glass-red-border);
+  background: rgba(0, 200, 83, 0.12);
+  border: 1px solid rgba(0, 200, 83, 0.30);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -789,7 +789,7 @@ footer {
   gap: 10px;
   margin-bottom: 12px;
 }
-.footer-contact-item svg { width: 16px; height: 16px; flex-shrink: 0; margin-top: 2px; stroke: var(--red); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.footer-contact-item svg { width: 16px; height: 16px; flex-shrink: 0; margin-top: 2px; stroke: #00C853; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .footer-contact-item span { font-size: 0.84rem; color: var(--text-muted); }
 .footer-bottom {
   display: flex;
