@@ -10,10 +10,10 @@
   --red-light:    #E03020;
   --red-dark:     #8B1410;
   --bg:           #0C0806;
-  --bg-mid:       #160C0A;
-  --glass:        rgba(26, 21, 18, 0.88);
-  --glass-hover:  rgba(38, 31, 27, 0.88);
-  --glass-border: rgba(255, 255, 255, 0.13);
+  --bg-mid:       #0B0B0D;
+  --glass:        rgba(255, 255, 255, 0.08);
+  --glass-hover:  rgba(255, 255, 255, 0.13);
+  --glass-border: rgba(255, 255, 255, 0.14);
   --glass-red:    rgba(192, 36, 26, 0.10);
   --glass-red-border: rgba(192, 36, 26, 0.30);
   --blur:         blur(22px);

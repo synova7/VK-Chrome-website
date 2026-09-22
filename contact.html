@@ -263,13 +263,23 @@
 <!-- ── Map / Location Visual ── -->
 <section class="section bg-dark" style="padding-top:0;">
   <div class="container">
-    <div class="glass" style="border-radius:var(--radius);overflow:hidden;height:340px;position:relative;">
-      <img src="assets/images/photo-09.jpg" alt="VK Chrome Rustenburg facility" style="width:100%;height:100%;object-fit:cover;opacity:0.45;"/>
-      <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;">
-        <div style="font-size:2.5rem;margin-bottom:16px;">📍</div>
-        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:0.06em;margin-bottom:8px;">7 Ferro Street, Zinniaville</div>
-        <div style="color:var(--text-muted);font-size:1rem;">Rustenburg, North West, South Africa</div>
-        <a href="https://maps.google.com/?q=7+Ferro+Street+Zinniaville+Rustenburg" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:24px;">
+    <div style="border-radius:var(--radius);overflow:hidden;position:relative;border:1px solid var(--glass-border);">
+      <iframe
+        src="https://maps.google.com/maps?q=7+Ferro+Street,+Zinniaville,+Rustenburg,+North+West,+South+Africa&output=embed&z=15"
+        width="100%"
+        height="400"
+        style="border:0;display:block;filter:invert(92%) hue-rotate(180deg) saturate(0.6);"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="VK Chrome location map">
+      </iframe>
+      <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(26,21,18,0.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+        <div>
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:0.05em;">7 Ferro Street, Zinniaville</div>
+          <div style="color:var(--text-muted);font-size:0.8rem;margin-top:2px;">Rustenburg, North West, South Africa</div>
+        </div>
+        <a href="https://maps.google.com/?q=7+Ferro+Street+Zinniaville+Rustenburg" target="_blank" rel="noopener" class="btn btn-outline" style="flex-shrink:0;padding:8px 16px;font-size:0.75rem;">
           Open in Google Maps
         </a>
       </div>
