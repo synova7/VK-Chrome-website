@@ -314,7 +314,6 @@ ul { list-style: none; }
 
 /* ── Stats bar ───────────────────────────────── */
 .stats-bar {
-  background: var(--bg-mid);
   padding: 48px 0 80px;
 }
 .stats-grid {
