@@ -216,7 +216,7 @@ ul { list-style: none; }
   height: 100vh;
   min-height: 600px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   overflow: hidden;
 }
 .hero-video {
@@ -248,36 +248,40 @@ ul { list-style: none; }
   position: relative;
   z-index: 2;
   width: 100%;
+  padding-top: calc(var(--nav-h) + 32px);
 }
 .hero-panel {
   display: inline-block;
-  max-width: 420px;
-  padding: 24px 28px;
-  border-left: 4px solid var(--red);
+  width: 300px;
+  height: 300px;
+  padding: 22px 24px;
+  border-left: 3px solid var(--red);
+  overflow: hidden;
 }
 .hero-eyebrow {
-  font-size: 0.75rem;
+  font-size: 0.55rem;
   font-weight: 600;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--red-light);
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 .hero-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(3rem, 7vw, 6.5rem);
+  font-size: clamp(1.5rem, 3.5vw, 3.25rem);
   line-height: 1;
   letter-spacing: 0.04em;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .hero-title span { color: var(--red); }
 .hero-subtitle {
-  font-size: 0.95rem;
+  font-size: 0.72rem;
   color: var(--text-muted);
-  margin-bottom: 28px;
-  max-width: 380px;
+  margin-bottom: 14px;
+  max-width: 100%;
 }
-.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+.hero-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.hero-panel .btn { padding: 7px 14px; font-size: 0.7rem; letter-spacing: 0.05em; }
 
 /* ── Buttons ─────────────────────────────────── */
 .btn {
@@ -530,8 +534,24 @@ ul { list-style: none; }
   padding: 44px 36px;
 }
 .vm-icon {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  width: 60px;
+  height: 60px;
+  background: var(--glass-red);
+  border: 1px solid var(--glass-red-border);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.vm-icon svg {
+  width: 26px;
+  height: 26px;
+  stroke: var(--red);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 /* ── Operations gallery ──────────────────────── */
@@ -766,7 +786,7 @@ footer {
   .grid-3 { grid-template-columns: 1fr; }
   .ops-gallery { grid-template-columns: 1fr 1fr; }
   .ops-gallery .img-panel.tall { grid-row: span 1; height: 240px; }
-  .hero-panel { padding: 18px 18px; max-width: 100%; }
+  .hero-panel { width: 220px; height: 220px; padding: 16px 18px; }
   .section { padding: 72px 0; }
   .form-row { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
