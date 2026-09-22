@@ -100,10 +100,9 @@ ul { list-style: none; }
   transition: background var(--transition), box-shadow var(--transition);
 }
 #nav.scrolled {
-  background: rgba(12, 8, 6, 0.92);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 1px 0 rgba(255,255,255,0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.07);
 }
 .nav-inner {
   display: flex;
@@ -257,6 +256,7 @@ ul { list-style: none; }
   min-height: 400px;
   padding: 22px 24px;
   border-left: 3px solid var(--red);
+  background: rgba(255, 255, 255, 0.07);
 }
 .hero-eyebrow {
   font-size: 0.55rem;
@@ -670,7 +670,7 @@ ul { list-style: none; }
 /* Phone field with country code */
 .phone-field { display: flex; gap: 8px; }
 .phone-code-select { flex: 0 0 auto; width: 104px; }
-.phone-field input { flex: 1; }
+.phone-field input[type="tel"] { flex: 1; min-width: 0; width: 0; }
 
 /* Response time note */
 .form-response-note {
