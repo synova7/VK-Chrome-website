@@ -45,6 +45,17 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
+/* ── Parallax hero ───────────────────────────── */
+const parallaxEls = document.querySelectorAll('.hero-video, .hero-img');
+if (parallaxEls.length) {
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    parallaxEls.forEach(el => {
+      el.style.transform = `translateY(${y * 0.38}px)`;
+    });
+  }, { passive: true });
+}
+
 /* ── Video mute/play guard ───────────────────── */
 document.querySelectorAll('video[autoplay]').forEach(v => {
   v.muted = true;
