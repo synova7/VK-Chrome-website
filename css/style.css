@@ -11,9 +11,9 @@
   --red-dark:     #8B1410;
   --bg:           #0C0806;
   --bg-mid:       #160C0A;
-  --glass:        rgba(255, 255, 255, 0.06);
-  --glass-hover:  rgba(255, 255, 255, 0.10);
-  --glass-border: rgba(255, 255, 255, 0.11);
+  --glass:        rgba(255, 255, 255, 0.10);
+  --glass-hover:  rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.16);
   --glass-red:    rgba(192, 36, 26, 0.10);
   --glass-red-border: rgba(192, 36, 26, 0.30);
   --blur:         blur(22px);
@@ -314,7 +314,8 @@ ul { list-style: none; }
 
 /* ── Stats bar ───────────────────────────────── */
 .stats-bar {
-  padding: 0 0 80px;
+  background: var(--bg-mid);
+  padding: 48px 0 80px;
 }
 .stats-grid {
   display: grid;
