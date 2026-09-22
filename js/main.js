@@ -69,6 +69,15 @@ if (form) {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
     const successEl = document.getElementById('form-success');
+
+    /* combine country code + phone number into hidden field */
+    const codeEl = document.getElementById('phone-code');
+    const phoneEl = document.getElementById('phone');
+    const phoneCombined = document.getElementById('phone-combined');
+    if (codeEl && phoneEl && phoneCombined) {
+      phoneCombined.value = codeEl.value + ' ' + phoneEl.value.trim();
+    }
+
     btn.disabled = true;
     btn.textContent = 'Sending…';
 

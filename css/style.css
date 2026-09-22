@@ -11,9 +11,9 @@
   --red-dark:     #8B1410;
   --bg:           #0C0806;
   --bg-mid:       #160C0A;
-  --glass:        rgba(255, 255, 255, 0.10);
-  --glass-hover:  rgba(255, 255, 255, 0.15);
-  --glass-border: rgba(255, 255, 255, 0.16);
+  --glass:        rgba(26, 21, 18, 0.88);
+  --glass-hover:  rgba(38, 31, 27, 0.88);
+  --glass-border: rgba(255, 255, 255, 0.13);
   --glass-red:    rgba(192, 36, 26, 0.10);
   --glass-red-border: rgba(192, 36, 26, 0.30);
   --blur:         blur(22px);
@@ -665,13 +665,61 @@ ul { list-style: none; }
 .form-group textarea { resize: vertical; min-height: 130px; }
 .form-group select option { background: #1a0d0d; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+/* Phone field with country code */
+.phone-field { display: flex; gap: 8px; }
+.phone-code-select { flex: 0 0 auto; width: 104px; }
+.phone-field input { flex: 1; }
+
+/* Response time note */
+.form-response-note {
+  text-align: center;
+  font-size: 0.73rem;
+  color: var(--text-dim);
+  margin-top: 10px;
+  letter-spacing: 0.04em;
+}
+
+/* Success state — McKinsey style */
 .form-success {
   display: none;
+  padding: 52px 24px 40px;
   text-align: center;
-  padding: 24px;
-  color: #4ade80;
-  font-weight: 600;
 }
+.success-check {
+  margin: 0 auto 20px;
+  width: 56px;
+  height: 56px;
+}
+.success-eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+.success-divider {
+  width: 36px;
+  height: 1px;
+  background: rgba(255,255,255,0.18);
+  margin: 0 auto 20px;
+}
+.success-body {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  max-width: 300px;
+  margin: 0 auto 16px;
+}
+.success-body strong { color: var(--text); font-weight: 600; }
+.success-contact {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  letter-spacing: 0.02em;
+}
+.success-contact a { color: var(--red); text-decoration: none; }
+.success-contact a:hover { text-decoration: underline; }
 
 /* ── Black-owned badge ───────────────────────── */
 .bee-badge {
