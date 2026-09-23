@@ -842,6 +842,12 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .hero-video,
+  .hero-img {
+    top: 0;
+    height: 100%;
+    will-change: auto;
+  }
   .nav-links { display: none; }
   .nav-burger { display: flex; }
   .grid-2, .vm-grid { grid-template-columns: 1fr; }

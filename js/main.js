@@ -45,9 +45,11 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-/* ── Parallax hero ───────────────────────────── */
+/* ── Parallax hero (desktop only — transform on <video> breaks iOS) ── */
 const parallaxEls = document.querySelectorAll('.hero-video, .hero-img');
-if (parallaxEls.length) {
+const skipParallax = window.matchMedia('(max-width: 768px)').matches ||
+                     window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (parallaxEls.length && !skipParallax) {
   const heroSection = parallaxEls[0].closest('.hero, .page-hero');
   const heroH = heroSection ? heroSection.offsetHeight : window.innerHeight;
   window.addEventListener('scroll', () => {
@@ -59,10 +61,17 @@ if (parallaxEls.length) {
   }, { passive: true });
 }
 
-/* ── Video mute/play guard ───────────────────── */
+/* ── Video autoplay guard + re-trigger on scroll-into-view ──────── */
+const videoObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.muted = true; e.target.play().catch(() => {}); }
+  });
+}, { threshold: 0.1 });
+
 document.querySelectorAll('video[autoplay]').forEach(v => {
   v.muted = true;
   v.play().catch(() => {});
+  videoObserver.observe(v);
 });
 
 /* ── Contact form (Web3Forms) ────────────────── */
