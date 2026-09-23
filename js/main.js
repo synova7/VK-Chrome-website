@@ -61,6 +61,14 @@ if (parallaxEls.length && !skipParallax) {
   }, { passive: true });
 }
 
+/* ── Skip oversized videos on mobile (show poster instead) ─────── */
+if (window.matchMedia('(max-width: 768px)').matches) {
+  document.querySelectorAll('video[data-mobile-skip]').forEach(v => {
+    v.querySelectorAll('source').forEach(s => s.remove());
+    v.load();
+  });
+}
+
 /* ── Video autoplay guard + re-trigger on scroll-into-view ──────── */
 const videoObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => {
