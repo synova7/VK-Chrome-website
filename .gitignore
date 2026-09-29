@@ -1,6 +1,12 @@
+# Private / business files
+Invoices/
+.claude/
+
+# OS & editor temp files
 .DS_Store
-*.orig
+Thumbs.db
+~$*
+*.tmp
+
+# Node (if ever used)
 node_modules/
-PHOTO-*.jpg
-VIDEO-*.mp4
-VK CHROME Company Profile.pdf
