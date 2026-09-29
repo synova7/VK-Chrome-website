@@ -29,6 +29,13 @@ document.querySelectorAll('.nav-links a, #nav-mobile a').forEach(a => {
   }
 });
 
+/* ── Email obfuscation (assembled at runtime, never in HTML source) ── */
+document.querySelectorAll('a[data-mu]').forEach(a => {
+  const addr = a.dataset.mu + '@' + a.dataset.md;
+  a.href = 'mailto:' + addr;
+  a.textContent = addr;
+});
+
 /* ── Footer year ─────────────────────────────── */
 const yearEl = document.getElementById('footer-year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
